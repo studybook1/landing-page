@@ -1756,6 +1756,49 @@
 		}
 
 		/* ==========================================
+   LANGUAGE TOGGLE
+   ========================================== */
+		.lang-toggle {
+			display: flex;
+			align-items: center;
+			border: var(--border);
+			border-radius: var(--r-sm);
+			box-shadow: var(--shadow-sm);
+			overflow: hidden;
+			margin-right: 8px;
+			height: 36px;
+			flex-shrink: 0;
+		}
+
+		.lang-btn {
+			padding: 6px 14px;
+			font-family: var(--font-m);
+			font-size: 12px;
+			font-weight: 700;
+			background: var(--white);
+			border: none;
+			cursor: pointer;
+			transition: var(--ease);
+			color: var(--gray);
+			height: 100%;
+			letter-spacing: 0.5px;
+		}
+
+		.lang-btn:first-child {
+			border-right: 2px solid var(--black)
+		}
+
+		.lang-btn.active {
+			background: var(--blue);
+			color: var(--white);
+		}
+
+		.lang-btn:hover:not(.active) {
+			background: var(--blue-light);
+			color: var(--black);
+		}
+
+		/* ==========================================
    SCROLL REVEAL
    ========================================== */
 		.reveal {
@@ -1842,6 +1885,10 @@
 
 			.mobile-toggle {
 				display: block
+			}
+
+			#mobLang {
+				display: flex !important
 			}
 
 			section,
@@ -1941,21 +1988,45 @@
 		<p>Города: Ташкент, Самарканд, Бухара, Навои, Андижан, Фергана, Наманган, Нукус.</p>
 	</div>
 
+	<!-- SEO Hidden — Uzbek -->
+	<div class="seo-only" role="complementary" aria-label="StudyBook.uz platformasi haqida" lang="uz">
+		<h2>StudyBook.uz — O'zbekistonda AI ta'lim platformasi</h2>
+		<p>StudyBook.uz — O'zbekistonda 11 yoshdan 28 yoshgacha bo'lgan o'quvchilar uchun AI-native ta'lim platformasi. Chet
+			tillari (ingliz, koreys, nemis, turk), matematika (maktab dasturi, olimpiada tayyorgarlik) va dasturlash (Python,
+			JavaScript, veb-ishlab chiqish, mobil ilovalar) bo'yicha shaxsiylashtirilgan ta'lim.</p>
+		<h3>Toshkent va butun O'zbekiston bo'ylab onlayn kurslar</h3>
+		<p>StudyBook.uz gibrid ta'lim formatini taklif etadi: butun O'zbekiston bo'ylab onlayn kurslar, o'quv markazida
+			oflayn mashg'ulotlar. Videodarslar, interaktiv topshiriqlar, o'qituvchi bilan jonli darslar, uy vazifalarini
+			avtomatik tekshirish.</p>
+		<h3>O'zbekistonda boshlang'ich dasturlash kurslari</h3>
+		<p>Noldan dasturlashni o'rganish: Python, JavaScript, HTML/CSS, React, Node.js. IT karyerasiga tayyorgarlik,
+			portfolio loyihalari, AI kod tekshiruvi.</p>
+		<h3>O'zbekistonda onlayn ingliz tili o'rganish</h3>
+		<p>AI personalizatsiya bilan ingliz tili kurslari: Elementary darajasidan Advanced darajasigacha. Og'zaki mashq,
+			grammatika, IELTS tayyorgarlik. Adaptiv mashqlar.</p>
+		<h3>Toshkentda onlayn matematika repetitori</h3>
+		<p>Shaxsiylashtirilgan matematika ta'limi: maktab dasturi, imtihonlarga tayyorgarlik, olimpiada matematikasi.
+			Mavzular bo'yicha taraqqiyot vizualizatsiyasi bilan bilimlar grafi.</p>
+		<h3>O'zbekistonda universitetga kirish tayyorgarligi</h3>
+		<p>O'zbekiston universitetlari va xorijiy oliy o'quv yurtlariga kirish imtihonlariga kompleks tayyorgarlik.</p>
+		<p>Shaharlar: Toshkent, Samarqand, Buxoro, Navoiy, Andijon, Farg'ona, Namangan, Nukus.</p>
+	</div>
+
 	<!-- Marquee Banner -->
 	<div class="top-banner" aria-hidden="true">
-		<div class="marquee">
-			<span>🚀 ПЛАТФОРМА В РАЗРАБОТКЕ</span>
-			<span>📚 ЯЗЫКИ · МАТЕМАТИКА · КОД</span>
-			<span>🤖 AI-ПЕРСОНАЛИЗАЦИЯ</span>
-			<span>🎯 ЗАПУСК Q4 2026</span>
-			<span>⚡ РАННИЙ ДОСТУП ОТКРЫТ</span>
-			<span>🏆 ГЕЙМИФИКАЦИЯ ОБУЧЕНИЯ</span>
-			<span>🚀 ПЛАТФОРМА В РАЗРАБОТКЕ</span>
-			<span>📚 ЯЗЫКИ · МАТЕМАТИКА · КОД</span>
-			<span>🤖 AI-ПЕРСОНАЛИЗАЦИЯ</span>
-			<span>🎯 ЗАПУСК Q4 2026</span>
-			<span>⚡ РАННИЙ ДОСТУП ОТКРЫТ</span>
-			<span>🏆 ГЕЙМИФИКАЦИЯ ОБУЧЕНИЯ</span>
+		<div class="marquee" id="marqueeTrack">
+			<span data-i18n="m1">🚀 ПЛАТФОРМА В РАЗРАБОТКЕ</span>
+			<span data-i18n="m2">📚 ЯЗЫКИ · МАТЕМАТИКА · КОД</span>
+			<span data-i18n="m3">🤖 AI-ПЕРСОНАЛИЗАЦИЯ</span>
+			<span data-i18n="m4">🎯 ЗАПУСК Q4 2026</span>
+			<span data-i18n="m5">⚡ РАННИЙ ДОСТУП ОТКРЫТ</span>
+			<span data-i18n="m6">🏆 ГЕЙМИФИКАЦИЯ ОБУЧЕНИЯ</span>
+			<span data-i18n="m1">🚀 ПЛАТФОРМА В РАЗРАБОТКЕ</span>
+			<span data-i18n="m2">📚 ЯЗЫКИ · МАТЕМАТИКА · КОД</span>
+			<span data-i18n="m3">🤖 AI-ПЕРСОНАЛИЗАЦИЯ</span>
+			<span data-i18n="m4">🎯 ЗАПУСК Q4 2026</span>
+			<span data-i18n="m5">⚡ РАННИЙ ДОСТУП ОТКРЫТ</span>
+			<span data-i18n="m6">🏆 ГЕЙМИФИКАЦИЯ ОБУЧЕНИЯ</span>
 		</div>
 	</div>
 
@@ -1966,13 +2037,25 @@
 			<span>StudyBook</span>
 		</a>
 		<ul class="nav-links">
-			<li><a href="#subjects">Предметы</a></li>
-			<li><a href="#ai">AI-фичи</a></li>
-			<li><a href="#gamify">Геймификация</a></li>
-			<li><a href="#roadmap">Роадмап</a></li>
-			<li><a href="#waitlist" class="nav-cta">Ранний доступ ✦</a></li>
+			<li><a href="#subjects" data-i18n="nav_subjects">Предметы</a></li>
+			<li><a href="#ai" data-i18n="nav_ai">AI-фичи</a></li>
+			<li><a href="#gamify" data-i18n="nav_gamify">Геймификация</a></li>
+			<li><a href="#roadmap" data-i18n="nav_roadmap">Роадмап</a></li>
+			<li>
+				<div class="lang-toggle">
+					<button class="lang-btn active" onclick="setLang('ru')" id="langRu">RU</button>
+					<button class="lang-btn" onclick="setLang('uz')" id="langUz">UZ</button>
+				</div>
+			</li>
+			<li><a href="#waitlist" class="nav-cta" data-i18n="nav_cta">Ранний доступ ✦</a></li>
 		</ul>
-		<button class="mobile-toggle" id="mobBtn" aria-label="Меню">☰</button>
+		<div style="display:flex;align-items:center;gap:6px">
+			<div class="lang-toggle" style="display:none" id="mobLang">
+				<button class="lang-btn active" onclick="setLang('ru')" id="langRuMob">RU</button>
+				<button class="lang-btn" onclick="setLang('uz')" id="langUzMob">UZ</button>
+			</div>
+			<button class="mobile-toggle" id="mobBtn" aria-label="Меню">☰</button>
+		</div>
 	</nav>
 
 	<!-- HERO -->
@@ -1985,41 +2068,41 @@
 		<div class="hero-inner">
 			<div class="hero-left">
 				<div class="hero-badge">
-					<div class="badge-dot"></div> Запуск Q4 2026 — Ранний доступ
+					<div class="badge-dot"></div> <span data-i18n="hero_badge">Запуск Q4 2026 — Ранний доступ</span>
 				</div>
 
-				<h1 class="hero-title">
+				<h1 class="hero-title" data-i18n="hero_title" data-i18n-html="true">
 					Учись <span class="accent">умнее</span>,<br>а не <span class="italic">дольше</span>
 				</h1>
 
-				<p class="hero-sub">
+				<p class="hero-sub" data-i18n="hero_sub">
 					AI-платформа, которая строит уникальный путь обучения для каждого ученика. Языки, математика, программирование
 					— всё в одном месте с геймификацией и адаптивной сложностью.
 				</p>
 
 				<div class="hero-actions">
-					<a href="#waitlist" class="btn btn-blue">
+					<a href="#waitlist" class="btn btn-blue" data-i18n="hero_cta">
 						Получить ранний доступ
 						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
 							stroke-linecap="round" stroke-linejoin="round">
 							<path d="M5 12h14M12 5l7 7-7 7" />
 						</svg>
 					</a>
-					<a href="#ai" class="btn btn-white">Как это работает</a>
+					<a href="#ai" class="btn btn-white" data-i18n="hero_cta2">Как это работает</a>
 				</div>
 
 				<div class="hero-stats">
 					<div class="stat">
 						<div class="stat-val">3</div>
-						<div class="stat-label">Направления</div>
+						<div class="stat-label" data-i18n="stat_directions">Направления</div>
 					</div>
 					<div class="stat">
 						<div class="stat-val">11–28</div>
-						<div class="stat-label">Возраст</div>
+						<div class="stat-label" data-i18n="stat_age">Возраст</div>
 					</div>
 					<div class="stat">
 						<div class="stat-val">24/7</div>
-						<div class="stat-label">AI-тьютор</div>
+						<div class="stat-label" data-i18n="stat_tutor">AI-тьютор</div>
 					</div>
 				</div>
 			</div>
@@ -2030,10 +2113,10 @@
 					<div class="xp-popup" id="xpPopup">+50 XP 🎉</div>
 					<div class="quiz-header">
 						<div class="quiz-xp">⭐ <span id="xpCount">350</span> XP</div>
-						<div class="quiz-streak">🔥 7 дней</div>
+						<div class="quiz-streak">🔥 <span data-i18n="quiz_streak">7 дней</span></div>
 					</div>
-					<div class="quiz-subject">Математика · Уровень 4</div>
-					<div class="quiz-question" id="quizQ">Чему равен корень из 144?</div>
+					<div class="quiz-subject" data-i18n="quiz_subject">Математика · Уровень 4</div>
+					<div class="quiz-question" id="quizQ" data-i18n="quiz_q1">Чему равен корень из 144?</div>
 					<div class="quiz-options" id="quizOpts">
 						<div class="quiz-opt" data-correct="false" onclick="handleQuiz(this)">
 							<div class="opt-letter">A</div>
@@ -2054,7 +2137,7 @@
 					</div>
 					<div class="quiz-footer">
 						<div class="quiz-progress-wrap">
-							<div class="quiz-progress-label">Прогресс урока</div>
+							<div class="quiz-progress-label" data-i18n="quiz_progress">Прогресс урока</div>
 							<div class="quiz-progress-bar">
 								<div class="quiz-progress-fill" id="quizFill"></div>
 							</div>
@@ -2069,37 +2152,40 @@
 	<!-- SUBJECTS -->
 	<section class="subjects" id="subjects">
 		<div class="container">
-			<div class="section-tag reveal">📚 Направления</div>
-			<h2 class="section-heading reveal r-d1">Три трека,<br>одна платформа</h2>
-			<p class="section-sub reveal r-d2">Каждое направление усилено AI — адаптивная сложность, персональный тьютор и
-				граф навыков.</p>
+			<div class="section-tag reveal" data-i18n="subj_tag">📚 Направления</div>
+			<h2 class="section-heading reveal r-d1" data-i18n="subj_heading" data-i18n-html="true">Три трека,<br>одна
+				платформа</h2>
+			<p class="section-sub reveal r-d2" data-i18n="subj_sub">Каждое направление усилено AI — адаптивная сложность,
+				персональный тьютор и граф навыков.</p>
 
 			<div class="subjects-grid">
 				<article class="subj-card reveal r-d1">
 					<div class="subj-icon">🌍</div>
-					<h3>Иностранные языки</h3>
-					<p>Английский, корейский, немецкий. AI анализирует произношение, проверяет эссе, адаптирует лексику и
-						грамматику под ваш CEFR-уровень.</p>
+					<h3 data-i18n="subj1_title">Иностранные языки</h3>
+					<p data-i18n="subj1_desc">Английский, корейский, немецкий. AI анализирует произношение, проверяет эссе,
+						адаптирует лексику и грамматику под ваш CEFR-уровень.</p>
 					<div class="subj-tags">
-						<span>IELTS</span><span>Разговорный</span><span>A1→C2</span><span>AI-оценка</span>
+						<span>IELTS</span><span data-i18n="subj1_tag2">Разговорный</span><span>A1→C2</span><span
+							data-i18n="subj1_tag4">AI-оценка</span>
 					</div>
 				</article>
 				<article class="subj-card reveal r-d2">
 					<div class="subj-icon">📐</div>
-					<h3>Математика</h3>
-					<p>От алгебры до олимпиад. Knowledge Graph с 500+ навыков, автоподбор задач оптимальной сложности и пошаговый
-						AI-разбор.</p>
+					<h3 data-i18n="subj2_title">Математика</h3>
+					<p data-i18n="subj2_desc">От алгебры до олимпиад. Knowledge Graph с 500+ навыков, автоподбор задач оптимальной
+						сложности и пошаговый AI-разбор.</p>
 					<div class="subj-tags">
-						<span>Школа</span><span>Олимпиады</span><span>Подготовка</span><span>Граф знаний</span>
+						<span data-i18n="subj2_tag1">Школа</span><span data-i18n="subj2_tag2">Олимпиады</span><span
+							data-i18n="subj2_tag3">Подготовка</span><span data-i18n="subj2_tag4">Граф знаний</span>
 					</div>
 				</article>
 				<article class="subj-card reveal r-d3">
 					<div class="subj-icon">💻</div>
-					<h3>Программирование</h3>
-					<p>Python, JavaScript, веб и мобильная разработка. Code-runner в браузере, AI-ревью кода, реальные проекты в
-						портфолио.</p>
+					<h3 data-i18n="subj3_title">Программирование</h3>
+					<p data-i18n="subj3_desc">Python, JavaScript, веб и мобильная разработка. Code-runner в браузере, AI-ревью
+						кода, реальные проекты в портфолио.</p>
 					<div class="subj-tags">
-						<span>Python</span><span>JavaScript</span><span>React</span><span>AI-ревью</span>
+						<span>Python</span><span>JavaScript</span><span>React</span><span data-i18n="subj3_tag4">AI-ревью</span>
 					</div>
 				</article>
 			</div>
@@ -2109,38 +2195,39 @@
 	<!-- AI FEATURES -->
 	<section class="ai-section" id="ai">
 		<div class="container">
-			<div class="section-tag reveal">🤖 Технологии</div>
-			<h2 class="section-heading reveal r-d1">AI, который понимает<br>как вы учитесь</h2>
-			<p class="section-sub reveal r-d2">Не просто тесты и видео. Платформа строит живую карту знаний и предсказывает
-				лучший следующий шаг.</p>
+			<div class="section-tag reveal" data-i18n="ai_tag">🤖 Технологии</div>
+			<h2 class="section-heading reveal r-d1" data-i18n="ai_heading" data-i18n-html="true">AI, который понимает<br>как
+				вы учитесь</h2>
+			<p class="section-sub reveal r-d2" data-i18n="ai_sub">Не просто тесты и видео. Платформа строит живую карту знаний
+				и предсказывает лучший следующий шаг.</p>
 
 			<div class="ai-grid">
 				<div class="ai-card reveal">
 					<div class="ai-card-icon">🧭</div>
-					<h3>Адаптивные траектории</h3>
-					<p>AI строит персональный путь обучения на основе Knowledge Graph — графа навыков с пререквизитами. Сложность
-						подстраивается в реальном времени.</p>
+					<h3 data-i18n="ai1_title">Адаптивные траектории</h3>
+					<p data-i18n="ai1_desc">AI строит персональный путь обучения на основе Knowledge Graph — графа навыков с
+						пререквизитами. Сложность подстраивается в реальном времени.</p>
 					<span class="ai-tag">Knowledge Tracing</span>
 				</div>
 				<div class="ai-card reveal r-d1">
 					<div class="ai-card-icon">💬</div>
-					<h3>AI-тьютор 24/7</h3>
-					<p>Сократовский метод: AI задаёт наводящие вопросы, а не даёт готовых ответов. Три предметных личности —
-						лингвист, математик, программист.</p>
+					<h3 data-i18n="ai2_title">AI-тьютор 24/7</h3>
+					<p data-i18n="ai2_desc">Сократовский метод: AI задаёт наводящие вопросы, а не даёт готовых ответов. Три
+						предметных личности — лингвист, математик, программист.</p>
 					<span class="ai-tag">Socratic Design</span>
 				</div>
 				<div class="ai-card reveal r-d2">
 					<div class="ai-card-icon">📊</div>
-					<h3>Рекомендации для родителей</h3>
-					<p>AI анализирует паттерны активности ребёнка и формирует отчёт: сферы интереса, таланты, рекомендованные пути
-						развития.</p>
+					<h3 data-i18n="ai3_title">Рекомендации для родителей</h3>
+					<p data-i18n="ai3_desc">AI анализирует паттерны активности ребёнка и формирует отчёт: сферы интереса, таланты,
+						рекомендованные пути развития.</p>
 					<span class="ai-tag">Parent Intelligence</span>
 				</div>
 				<div class="ai-card reveal r-d3">
 					<div class="ai-card-icon">⚡</div>
-					<h3>Inbox для преподавателя</h3>
-					<p>AI-приоритизированная очередь задач: кому нужна помощь, кто готов к повышению. Human-in-the-loop —
-						финальное слово за учителем.</p>
+					<h3 data-i18n="ai4_title">Inbox для преподавателя</h3>
+					<p data-i18n="ai4_desc">AI-приоритизированная очередь задач: кому нужна помощь, кто готов к повышению.
+						Human-in-the-loop — финальное слово за учителем.</p>
 					<span class="ai-tag">Next-Best-Action</span>
 				</div>
 
@@ -2149,8 +2236,8 @@
 					<div>
 						<div class="ai-card-icon" style="background:var(--blue-light)">🧠</div>
 						<h3>Learning Context Graph</h3>
-						<p>Живой граф, связывающий каждого ученика с историей обучения, стилем восприятия, интересами и целями.
-							Каждое решение преподавателя — прецедент для AI.</p>
+						<p data-i18n="ai5_desc">Живой граф, связывающий каждого ученика с историей обучения, стилем восприятия,
+							интересами и целями. Каждое решение преподавателя — прецедент для AI.</p>
 						<span class="ai-tag" style="background:var(--blue-light);color:var(--blue)">AI Engine Core</span>
 					</div>
 					<div class="mock-3d">
@@ -2179,41 +2266,42 @@
 	<section class="gamify" id="gamify">
 		<div class="container">
 			<div class="gamify-header">
-				<div class="section-tag reveal">🏆 Геймификация</div>
-				<h2 class="section-heading reveal r-d1">Учёба как игра,<br>результаты — реальные</h2>
-				<p class="section-sub reveal r-d2">Каждое задание приносит XP, каждый день — стрик, каждый уровень — новые
-					достижения и разблокированные возможности.</p>
+				<div class="section-tag reveal" data-i18n="gam_tag">🏆 Геймификация</div>
+				<h2 class="section-heading reveal r-d1" data-i18n="gam_heading" data-i18n-html="true">Учёба как
+					игра,<br>результаты — реальные</h2>
+				<p class="section-sub reveal r-d2" data-i18n="gam_sub">Каждое задание приносит XP, каждый день — стрик, каждый
+					уровень — новые достижения и разблокированные возможности.</p>
 			</div>
 
 			<div class="gamify-grid">
 				<div class="gamify-item reveal">
 					<div class="gamify-emoji">⭐</div>
-					<h4>XP за всё</h4>
-					<p>Уроки, тесты, домашки, стрики — всё приносит очки опыта</p>
+					<h4 data-i18n="gam1_title">XP за всё</h4>
+					<p data-i18n="gam1_desc">Уроки, тесты, домашки, стрики — всё приносит очки опыта</p>
 				</div>
 				<div class="gamify-item reveal r-d1">
 					<div class="gamify-emoji">🔥</div>
-					<h4>Стрики</h4>
-					<p>Серия дней непрерывного обучения с бонусами за длинные цепочки</p>
+					<h4 data-i18n="gam2_title">Стрики</h4>
+					<p data-i18n="gam2_desc">Серия дней непрерывного обучения с бонусами за длинные цепочки</p>
 				</div>
 				<div class="gamify-item reveal r-d2">
 					<div class="gamify-emoji">🏅</div>
-					<h4>Достижения</h4>
-					<p>25+ ачивок за мастерство, скорость, аккуратность и упорство</p>
+					<h4 data-i18n="gam3_title">Достижения</h4>
+					<p data-i18n="gam3_desc">25+ ачивок за мастерство, скорость, аккуратность и упорство</p>
 				</div>
 				<div class="gamify-item reveal r-d3">
 					<div class="gamify-emoji">📊</div>
-					<h4>Лидерборды</h4>
-					<p>Недельные рейтинги по группе, городу и всей платформе</p>
+					<h4 data-i18n="gam4_title">Лидерборды</h4>
+					<p data-i18n="gam4_desc">Недельные рейтинги по группе, городу и всей платформе</p>
 				</div>
 			</div>
 
 			<div class="achievements reveal">
-				<div class="achievement">🎯 Первый урок</div>
-				<div class="achievement">🔥 7-дневный стрик</div>
-				<div class="achievement">💎 100% на тесте</div>
-				<div class="achievement">🚀 Уровень 10</div>
-				<div class="achievement">🏆 Топ-3 недели</div>
+				<div class="achievement" data-i18n="ach1">🎯 Первый урок</div>
+				<div class="achievement" data-i18n="ach2">🔥 7-дневный стрик</div>
+				<div class="achievement" data-i18n="ach3">💎 100% на тесте</div>
+				<div class="achievement" data-i18n="ach4">🚀 Уровень 10</div>
+				<div class="achievement" data-i18n="ach5">🏆 Топ-3 недели</div>
 			</div>
 		</div>
 	</section>
@@ -2222,55 +2310,57 @@
 	<section class="roadmap" id="roadmap">
 		<div class="container">
 			<div class="roadmap-header">
-				<div class="section-tag reveal">🗺️ Роадмап</div>
-				<h2 class="section-heading reveal r-d1">Путь к запуску</h2>
-				<p class="section-sub reveal r-d2">Мы в активной фазе разработки. Каждый квартал — новый этап.</p>
+				<div class="section-tag reveal" data-i18n="road_tag">🗺️ Роадмап</div>
+				<h2 class="section-heading reveal r-d1" data-i18n="road_heading">Путь к запуску</h2>
+				<p class="section-sub reveal r-d2" data-i18n="road_sub">Мы в активной фазе разработки. Каждый квартал — новый
+					этап.</p>
 			</div>
 
 			<div class="timeline">
 				<div class="tl-item active reveal">
 					<div class="tl-dot"></div>
 					<div class="tl-content">
-						<div class="tl-date">Март 2026 — Сейчас</div>
-						<div class="tl-title">Архитектура & Дизайн</div>
-						<div class="tl-desc">Проектирование AI Engine, Knowledge Graph, техстек. UX-исследования, дизайн-система,
-							прототипы.</div>
-						<span class="tl-status">● В процессе</span>
+						<div class="tl-date" data-i18n="tl1_date">Март 2026 — Сейчас</div>
+						<div class="tl-title" data-i18n="tl1_title">Архитектура & Дизайн</div>
+						<div class="tl-desc" data-i18n="tl1_desc">Проектирование AI Engine, Knowledge Graph, техстек.
+							UX-исследования, дизайн-система, прототипы.</div>
+						<span class="tl-status" data-i18n="tl_active">● В процессе</span>
 					</div>
 				</div>
 				<div class="tl-item soon reveal r-d1">
 					<div class="tl-dot"></div>
 					<div class="tl-content">
 						<div class="tl-date">Q2 2026</div>
-						<div class="tl-title">MVP: Курсы & AI-тьютор</div>
-						<div class="tl-desc">Курсовая платформа с видеоуроками, тестами и первой версией AI-тьютора. Онбординг с
-							диагностикой.</div>
-						<span class="tl-status">Скоро</span>
+						<div class="tl-title" data-i18n="tl2_title">MVP: Курсы & AI-тьютор</div>
+						<div class="tl-desc" data-i18n="tl2_desc">Курсовая платформа с видеоуроками, тестами и первой версией
+							AI-тьютора. Онбординг с диагностикой.</div>
+						<span class="tl-status" data-i18n="tl_soon">Скоро</span>
 					</div>
 				</div>
 				<div class="tl-item soon reveal r-d2">
 					<div class="tl-dot"></div>
 					<div class="tl-content">
 						<div class="tl-date">Q3 2026</div>
-						<div class="tl-title">Адаптивное обучение & Live</div>
-						<div class="tl-desc">Adaptive Learning Engine, live-уроки, мобильное приложение, Teacher Inbox.</div>
-						<span class="tl-status">Скоро</span>
+						<div class="tl-title" data-i18n="tl3_title">Адаптивное обучение & Live</div>
+						<div class="tl-desc" data-i18n="tl3_desc">Adaptive Learning Engine, live-уроки, мобильное приложение,
+							Teacher Inbox.</div>
+						<span class="tl-status" data-i18n="tl_soon">Скоро</span>
 					</div>
 				</div>
 				<div class="tl-item soon reveal r-d3">
 					<div class="tl-dot"></div>
 					<div class="tl-content">
 						<div class="tl-date">Q4 2026</div>
-						<div class="tl-title">Полный запуск 🚀</div>
-						<div class="tl-desc">Parent OS, прогнозирование успеваемости, граф знаний, гибрид онлайн+оффлайн. Открытая
-							регистрация.</div>
-						<span class="tl-status">Запуск</span>
+						<div class="tl-title" data-i18n="tl4_title">Полный запуск 🚀</div>
+						<div class="tl-desc" data-i18n="tl4_desc">Parent OS, прогнозирование успеваемости, граф знаний, гибрид
+							онлайн+оффлайн. Открытая регистрация.</div>
+						<span class="tl-status" data-i18n="tl_launch">Запуск</span>
 					</div>
 				</div>
 			</div>
 
 			<div class="launch-bar reveal">
-				<div class="launch-bar-label">Прогресс разработки</div>
+				<div class="launch-bar-label" data-i18n="progress_label">Прогресс разработки</div>
 				<div class="launch-bar-track">
 					<div class="launch-bar-fill"></div>
 				</div>
@@ -2287,15 +2377,16 @@
 		<div class="sticker sticker-4" aria-hidden="true">🎮</div>
 
 		<div style="position:relative;z-index:2">
-			<h2 class="waitlist-title reveal">Будьте первыми 🎉</h2>
-			<p class="waitlist-sub reveal r-d1">
+			<h2 class="waitlist-title reveal" data-i18n="wl_title">Будьте первыми 🎉</h2>
+			<p class="waitlist-sub reveal r-d1" data-i18n="wl_sub" data-i18n-html="true">
 				Оставьте email — пригласим на закрытый бета-тест.<br>Первые 100 пользователей получат бесплатный доступ.
 			</p>
 			<div class="waitlist-form reveal r-d2">
-				<input type="email" class="waitlist-input" placeholder="ваш@email.com" aria-label="Email" id="emailIn">
-				<button class="waitlist-btn" id="wlBtn" onclick="submitWL()">Записаться →</button>
+				<input type="email" class="waitlist-input" placeholder="ваш@email.com" aria-label="Email" id="emailIn"
+					data-i18n-placeholder="wl_placeholder">
+				<button class="waitlist-btn" id="wlBtn" onclick="submitWL()" data-i18n="wl_btn">Записаться →</button>
 			</div>
-			<p class="waitlist-note reveal r-d3">Без спама. Только важные обновления о запуске.</p>
+			<p class="waitlist-note reveal r-d3" data-i18n="wl_note">Без спама. Только важные обновления о запуске.</p>
 		</div>
 	</section>
 
@@ -2307,25 +2398,26 @@
 					<div class="flogo-box">SB</div>
 					<span>StudyBook</span>
 				</div>
-				<p>AI-native платформа персонализированного образования. Языки, математика, программирование.</p>
+				<p data-i18n="footer_desc">AI-native платформа персонализированного образования. Языки, математика,
+					программирование.</p>
 			</div>
 			<div class="footer-cols">
 				<div class="footer-col">
-					<h4>Платформа</h4>
-					<a href="#subjects">Предметы</a>
-					<a href="#ai">AI-технологии</a>
-					<a href="#gamify">Геймификация</a>
-					<a href="#roadmap">Роадмап</a>
+					<h4 data-i18n="footer_platform">Платформа</h4>
+					<a href="#subjects" data-i18n="nav_subjects">Предметы</a>
+					<a href="#ai" data-i18n="footer_ai">AI-технологии</a>
+					<a href="#gamify" data-i18n="nav_gamify">Геймификация</a>
+					<a href="#roadmap" data-i18n="nav_roadmap">Роадмап</a>
 				</div>
 				<div class="footer-col">
-					<h4>Ресурсы</h4>
-					<a href="#">Блог</a>
+					<h4 data-i18n="footer_resources">Ресурсы</h4>
+					<a href="#" data-i18n="footer_blog">Блог</a>
 					<a href="#">FAQ</a>
-					<a href="#">Для преподавателей</a>
-					<a href="#">Для родителей</a>
+					<a href="#" data-i18n="footer_teachers">Для преподавателей</a>
+					<a href="#" data-i18n="footer_parents">Для родителей</a>
 				</div>
 				<div class="footer-col">
-					<h4>Контакты</h4>
+					<h4 data-i18n="footer_contacts">Контакты</h4>
 					<a href="mailto:hello@studybook.uz">hello@studybook.uz</a>
 					<a href="#">Telegram</a>
 					<a href="#">Instagram</a>
@@ -2333,26 +2425,250 @@
 			</div>
 		</div>
 		<div class="footer-bottom">
-			<span>© 2026 StudyBook.uz. Все права защищены.</span>
-			<span>Ташкент, Узбекистан</span>
+			<span data-i18n="footer_copy">© 2026 StudyBook.uz. Все права защищены.</span>
+			<span data-i18n="footer_city">Ташкент, Узбекистан</span>
 		</div>
 	</footer>
 
 	<script>
-		/* === QUIZ INTERACTION === */
+		/* ==========================================
+			 i18n TRANSLATIONS SYSTEM
+			 ========================================== */
+		const T = {
+			ru: {
+				// Marquee
+				m1: '🚀 ПЛАТФОРМА В РАЗРАБОТКЕ', m2: '📚 ЯЗЫКИ · МАТЕМАТИКА · КОД', m3: '🤖 AI-ПЕРСОНАЛИЗАЦИЯ',
+				m4: '🎯 ЗАПУСК Q4 2026', m5: '⚡ РАННИЙ ДОСТУП ОТКРЫТ', m6: '🏆 ГЕЙМИФИКАЦИЯ ОБУЧЕНИЯ',
+				// Nav
+				nav_subjects: 'Предметы', nav_ai: 'AI-фичи', nav_gamify: 'Геймификация',
+				nav_roadmap: 'Роадмап', nav_cta: 'Ранний доступ ✦',
+				// Hero
+				hero_badge: 'Запуск Q4 2026 — Ранний доступ',
+				hero_title: 'Учись <span class="accent">умнее</span>,<br>а не <span class="italic">дольше</span>',
+				hero_sub: 'AI-платформа, которая строит уникальный путь обучения для каждого ученика. Языки, математика, программирование — всё в одном месте с геймификацией и адаптивной сложностью.',
+				hero_cta: 'Получить ранний доступ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>',
+				hero_cta2: 'Как это работает',
+				stat_directions: 'Направления', stat_age: 'Возраст', stat_tutor: 'AI-тьютор',
+				// Quiz
+				quiz_streak: '7 дней', quiz_subject: 'Математика · Уровень 4', quiz_q1: 'Чему равен корень из 144?',
+				quiz_progress: 'Прогресс урока',
+				// Subjects
+				subj_tag: '📚 Направления',
+				subj_heading: 'Три трека,<br>одна платформа',
+				subj_sub: 'Каждое направление усилено AI — адаптивная сложность, персональный тьютор и граф навыков.',
+				subj1_title: 'Иностранные языки',
+				subj1_desc: 'Английский, корейский, немецкий. AI анализирует произношение, проверяет эссе, адаптирует лексику и грамматику под ваш CEFR-уровень.',
+				subj1_tag2: 'Разговорный', subj1_tag4: 'AI-оценка',
+				subj2_title: 'Математика',
+				subj2_desc: 'От алгебры до олимпиад. Knowledge Graph с 500+ навыков, автоподбор задач оптимальной сложности и пошаговый AI-разбор.',
+				subj2_tag1: 'Школа', subj2_tag2: 'Олимпиады', subj2_tag3: 'Подготовка', subj2_tag4: 'Граф знаний',
+				subj3_title: 'Программирование',
+				subj3_desc: 'Python, JavaScript, веб и мобильная разработка. Code-runner в браузере, AI-ревью кода, реальные проекты в портфолио.',
+				subj3_tag4: 'AI-ревью',
+				// AI
+				ai_tag: '🤖 Технологии',
+				ai_heading: 'AI, который понимает<br>как вы учитесь',
+				ai_sub: 'Не просто тесты и видео. Платформа строит живую карту знаний и предсказывает лучший следующий шаг.',
+				ai1_title: 'Адаптивные траектории',
+				ai1_desc: 'AI строит персональный путь обучения на основе Knowledge Graph — графа навыков с пререквизитами. Сложность подстраивается в реальном времени.',
+				ai2_title: 'AI-тьютор 24/7',
+				ai2_desc: 'Сократовский метод: AI задаёт наводящие вопросы, а не даёт готовых ответов. Три предметных личности — лингвист, математик, программист.',
+				ai3_title: 'Рекомендации для родителей',
+				ai3_desc: 'AI анализирует паттерны активности ребёнка и формирует отчёт: сферы интереса, таланты, рекомендованные пути развития.',
+				ai4_title: 'Inbox для преподавателя',
+				ai4_desc: 'AI-приоритизированная очередь задач: кому нужна помощь, кто готов к повышению. Human-in-the-loop — финальное слово за учителем.',
+				ai5_desc: 'Живой граф, связывающий каждого ученика с историей обучения, стилем восприятия, интересами и целями. Каждое решение преподавателя — прецедент для AI.',
+				// Gamification
+				gam_tag: '🏆 Геймификация',
+				gam_heading: 'Учёба как игра,<br>результаты — реальные',
+				gam_sub: 'Каждое задание приносит XP, каждый день — стрик, каждый уровень — новые достижения и разблокированные возможности.',
+				gam1_title: 'XP за всё', gam1_desc: 'Уроки, тесты, домашки, стрики — всё приносит очки опыта',
+				gam2_title: 'Стрики', gam2_desc: 'Серия дней непрерывного обучения с бонусами за длинные цепочки',
+				gam3_title: 'Достижения', gam3_desc: '25+ ачивок за мастерство, скорость, аккуратность и упорство',
+				gam4_title: 'Лидерборды', gam4_desc: 'Недельные рейтинги по группе, городу и всей платформе',
+				ach1: '🎯 Первый урок', ach2: '🔥 7-дневный стрик', ach3: '💎 100% на тесте',
+				ach4: '🚀 Уровень 10', ach5: '🏆 Топ-3 недели',
+				// Roadmap
+				road_tag: '🗺️ Роадмап', road_heading: 'Путь к запуску',
+				road_sub: 'Мы в активной фазе разработки. Каждый квартал — новый этап.',
+				tl1_date: 'Март 2026 — Сейчас', tl1_title: 'Архитектура & Дизайн',
+				tl1_desc: 'Проектирование AI Engine, Knowledge Graph, техстек. UX-исследования, дизайн-система, прототипы.',
+				tl_active: '● В процессе', tl_soon: 'Скоро', tl_launch: 'Запуск',
+				tl2_title: 'MVP: Курсы & AI-тьютор',
+				tl2_desc: 'Курсовая платформа с видеоуроками, тестами и первой версией AI-тьютора. Онбординг с диагностикой.',
+				tl3_title: 'Адаптивное обучение & Live',
+				tl3_desc: 'Adaptive Learning Engine, live-уроки, мобильное приложение, Teacher Inbox.',
+				tl4_title: 'Полный запуск 🚀',
+				tl4_desc: 'Parent OS, прогнозирование успеваемости, граф знаний, гибрид онлайн+оффлайн. Открытая регистрация.',
+				progress_label: 'Прогресс разработки',
+				// Waitlist
+				wl_title: 'Будьте первыми 🎉',
+				wl_sub: 'Оставьте email — пригласим на закрытый бета-тест.<br>Первые 100 пользователей получат бесплатный доступ.',
+				wl_placeholder: 'ваш@email.com', wl_btn: 'Записаться →',
+				wl_note: 'Без спама. Только важные обновления о запуске.',
+				wl_success: '✓ Записано!',
+				// Footer
+				footer_desc: 'AI-native платформа персонализированного образования. Языки, математика, программирование.',
+				footer_platform: 'Платформа', footer_ai: 'AI-технологии',
+				footer_resources: 'Ресурсы', footer_blog: 'Блог',
+				footer_teachers: 'Для преподавателей', footer_parents: 'Для родителей',
+				footer_contacts: 'Контакты',
+				footer_copy: '© 2026 StudyBook.uz. Все права защищены.',
+				footer_city: 'Ташкент, Узбекистан',
+			},
+			uz: {
+				// Marquee
+				m1: "🚀 PLATFORMA ISHLAB CHIQILMOQDA", m2: "📚 TILLAR · MATEMATIKA · KOD", m3: "🤖 AI-PERSONALIZATSIYA",
+				m4: "🎯 ISHGA TUSHIRISH Q4 2026", m5: "⚡ ERTA KIRISH OCHIQ", m6: "🏆 O'YINLI TA'LIM",
+				// Nav
+				nav_subjects: 'Fanlar', nav_ai: 'AI-texnologiyalar', nav_gamify: "Geymifikatsiya",
+				nav_roadmap: 'Rejalar', nav_cta: 'Erta kirish ✦',
+				// Hero
+				hero_badge: "Ishga tushirish Q4 2026 — Erta kirish",
+				hero_title: "Aqlliroq <span class=\"accent\">o'rgan</span>,<br>uzoqroq <span class=\"italic\">emas</span>",
+				hero_sub: "Har bir o'quvchi uchun noyob ta'lim yo'lini yaratadigan AI-platforma. Tillar, matematika, dasturlash — barchasi bir joyda geymifikatsiya va adaptiv qiyinchilik bilan.",
+				hero_cta: "Erta kirish olish <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M12 5l7 7-7 7\"/></svg>",
+				hero_cta2: 'Bu qanday ishlaydi',
+				stat_directions: "Yo'nalishlar", stat_age: 'Yosh', stat_tutor: 'AI-tyutor',
+				// Quiz
+				quiz_streak: '7 kun', quiz_subject: 'Matematika · 4-daraja', quiz_q1: '144 ning ildizi nimaga teng?',
+				quiz_progress: 'Dars jarayoni',
+				// Subjects
+				subj_tag: '📚 Fanlar',
+				subj_heading: "Uchta yo'nalish,<br>bitta platforma",
+				subj_sub: "Har bir yo'nalish AI bilan kuchaytirilgan — adaptiv qiyinchilik, shaxsiy tyutor va ko'nikmalar grafi.",
+				subj1_title: 'Chet tillari',
+				subj1_desc: "Ingliz, koreys, nemis. AI talaffuzni tahlil qiladi, insholarni tekshiradi, lug'at va grammatikani CEFR darajangizga moslashtiradi.",
+				subj1_tag2: "Og'zaki", subj1_tag4: 'AI-baholash',
+				subj2_title: 'Matematika',
+				subj2_desc: "Algebradan olimpiadagacha. 500+ ko'nikma bilan Knowledge Graph, optimal qiyinchilikdagi masalalarni avtomatik tanlash va AI bilan bosqichma-bosqich yechim.",
+				subj2_tag1: 'Maktab', subj2_tag2: 'Olimpiadalar', subj2_tag3: 'Tayyorgarlik', subj2_tag4: 'Bilimlar grafi',
+				subj3_title: 'Dasturlash',
+				subj3_desc: "Python, JavaScript, veb va mobil ishlab chiqish. Brauzerda Code-runner, AI kod tekshiruvi, portfoliodagi haqiqiy loyihalar.",
+				subj3_tag4: 'AI-tekshiruv',
+				// AI
+				ai_tag: '🤖 Texnologiyalar',
+				ai_heading: "AI — siz qanday<br>o'rganishingizni tushunadi",
+				ai_sub: "Shunchaki testlar va video emas. Platforma jonli bilimlar xaritasini yaratadi va eng yaxshi keyingi qadamni bashorat qiladi.",
+				ai1_title: "Adaptiv yo'nalishlar",
+				ai1_desc: "AI Knowledge Graph asosida shaxsiy ta'lim yo'lini yaratadi — prerekvizitlar bilan ko'nikmalar grafi. Qiyinchilik real vaqtda moslashadi.",
+				ai2_title: 'AI-tyutor 24/7',
+				ai2_desc: "Sokrat usuli: AI tayyor javob bermaydi, balki yo'naltiruvchi savollar beradi. Uchta fan shaxsiyati — lingvist, matematik, dasturchi.",
+				ai3_title: "Ota-onalar uchun tavsiyalar",
+				ai3_desc: "AI bolaning faollik naqshlarini tahlil qiladi va hisobot tuzadi: qiziqish sohalari, iqtidorlar, tavsiya etilgan rivojlanish yo'llari.",
+				ai4_title: "O'qituvchi uchun Inbox",
+				ai4_desc: "AI-tartiblangan vazifalar navbati: kimga yordam kerak, kim yuksalishga tayyor. Human-in-the-loop — yakuniy so'z o'qituvchida.",
+				ai5_desc: "Har bir o'quvchini ta'lim tarixi, idrok uslubi, qiziqishlari va maqsadlari bilan bog'laydigan jonli graf. O'qituvchining har bir qarori — AI uchun pretsedent.",
+				// Gamification
+				gam_tag: "🏆 Geymifikatsiya",
+				gam_heading: "O'qish — o'yin kabi,<br>natijalar — haqiqiy",
+				gam_sub: "Har bir topshiriq XP keltiradi, har bir kun — strik, har bir daraja — yangi yutuqlar va imkoniyatlar.",
+				gam1_title: 'Hamma narsa uchun XP', gam1_desc: "Darslar, testlar, uy vazifalari, striklar — hammasi tajriba ballarini beradi",
+				gam2_title: 'Striklar', gam2_desc: "Uzluksiz ta'lim kunlari seriyasi — uzun zanjirlar uchun bonuslar",
+				gam3_title: 'Yutuqlar', gam3_desc: "Mahorat, tezlik, aniqlik va qat'iyat uchun 25+ yutuq",
+				gam4_title: 'Liderborlar', gam4_desc: "Guruh, shahar va butun platforma bo'yicha haftalik reytinglar",
+				ach1: "🎯 Birinchi dars", ach2: '🔥 7 kunlik strik', ach3: '💎 Testda 100%',
+				ach4: '🚀 10-daraja', ach5: "🏆 Hafta Top-3'i",
+				// Roadmap
+				road_tag: "🗺️ Rejalar", road_heading: "Ishga tushirish yo'li",
+				road_sub: "Biz faol ishlab chiqish bosqichidamiz. Har chorak — yangi bosqich.",
+				tl1_date: 'Mart 2026 — Hozir', tl1_title: "Arxitektura & Dizayn",
+				tl1_desc: "AI Engine, Knowledge Graph, texnologik stek loyihalash. UX-tadqiqotlar, dizayn tizimi, prototiplar.",
+				tl_active: "● Jarayonda", tl_soon: 'Tez kunda', tl_launch: "Ishga tushirish",
+				tl2_title: 'MVP: Kurslar & AI-tyutor',
+				tl2_desc: "Videodarslar, testlar va AI-tyutorning birinchi versiyasi bilan kurs platformasi. Diagnostika bilan onbording.",
+				tl3_title: "Adaptiv ta'lim & Live",
+				tl3_desc: "Adaptive Learning Engine, jonli darslar, mobil ilova, Teacher Inbox.",
+				tl4_title: "To'liq ishga tushirish 🚀",
+				tl4_desc: "Parent OS, o'zlashtirish prognozi, bilimlar grafi, onlayn+oflayn gibrid. Ochiq ro'yxatdan o'tish.",
+				progress_label: "Ishlab chiqish jarayoni",
+				// Waitlist
+				wl_title: "Birinchilardan bo'ling 🎉",
+				wl_sub: "Email qoldiring — yopiq beta-testga taklif qilamiz.<br>Birinchi 100 foydalanuvchi bepul kirish oladi.",
+				wl_placeholder: 'sizning@email.com', wl_btn: "Ro'yxatdan o'tish →",
+				wl_note: "Spam yo'q. Faqat ishga tushirish haqida muhim yangiliklar.",
+				wl_success: "✓ Yozildingiz!",
+				// Footer
+				footer_desc: "AI-native shaxsiylashtirilgan ta'lim platformasi. Tillar, matematika, dasturlash.",
+				footer_platform: 'Platforma', footer_ai: 'AI-texnologiyalar',
+				footer_resources: 'Resurslar', footer_blog: 'Blog',
+				footer_teachers: "O'qituvchilar uchun", footer_parents: 'Ota-onalar uchun',
+				footer_contacts: "Bog'lanish",
+				footer_copy: "© 2026 StudyBook.uz. Barcha huquqlar himoyalangan.",
+				footer_city: "Toshkent, O'zbekiston",
+			}
+		};
+
+		// Quiz questions per language
+		const questionsI18n = {
+			ru: [
+				{ q: 'Чему равен корень из 144?', opts: ['11', '12', '14', '13'], correct: 1, subj: 'Математика · Уровень 4' },
+				{ q: 'Переведите: "I am learning"', opts: ['Я учу', 'Я учусь', 'Я изучил', 'Я буду учить'], correct: 1, subj: 'Английский · Уровень 3' },
+				{ q: 'Что выведет: print(2**3)?', opts: ['6', '9', '8', '5'], correct: 2, subj: 'Python · Уровень 5' },
+				{ q: 'Сколько сторон у гексагона?', opts: ['5', '7', '8', '6'], correct: 3, subj: 'Геометрия · Уровень 2' },
+			],
+			uz: [
+				{ q: '144 ning ildizi nimaga teng?', opts: ['11', '12', '14', '13'], correct: 1, subj: 'Matematika · 4-daraja' },
+				{ q: 'Tarjima qiling: "I am learning"', opts: ["Men o'qitaman", "Men o'qiyapman", "Men o'qidim", "Men o'qiyman"], correct: 1, subj: 'Ingliz tili · 3-daraja' },
+				{ q: 'print(2**3) nima chiqaradi?', opts: ['6', '9', '8', '5'], correct: 2, subj: 'Python · 5-daraja' },
+				{ q: "Oltiburchakning nechta tomoni bor?", opts: ['5', '7', '8', '6'], correct: 3, subj: 'Geometriya · 2-daraja' },
+			]
+		};
+
+		let currentLang = 'ru';
+		let questions = questionsI18n.ru;
+
+		function setLang(lang) {
+			currentLang = lang;
+			questions = questionsI18n[lang];
+			document.documentElement.lang = lang;
+
+			// Update toggle buttons
+			document.getElementById('langRu').classList.toggle('active', lang === 'ru');
+			document.getElementById('langUz').classList.toggle('active', lang === 'uz');
+			document.getElementById('langRuMob').classList.toggle('active', lang === 'ru');
+			document.getElementById('langUzMob').classList.toggle('active', lang === 'uz');
+
+			// Apply translations
+			document.querySelectorAll('[data-i18n]').forEach(el => {
+				const key = el.getAttribute('data-i18n');
+				if (T[lang][key] !== undefined) {
+					if (el.hasAttribute('data-i18n-html')) {
+						el.innerHTML = T[lang][key];
+					} else {
+						// Preserve SVG inside buttons
+						const svg = el.querySelector('svg');
+						if (svg && T[lang][key].includes('<svg')) {
+							el.innerHTML = T[lang][key];
+						} else if (svg) {
+							el.childNodes.forEach(n => { if (n.nodeType === 3) n.remove(); });
+							el.insertBefore(document.createTextNode(T[lang][key] + ' '), svg);
+						} else {
+							el.textContent = T[lang][key];
+						}
+					}
+				}
+			});
+
+			// Update placeholders
+			document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+				const key = el.getAttribute('data-i18n-placeholder');
+				if (T[lang][key]) el.placeholder = T[lang][key];
+			});
+
+			// Reload current quiz question
+			loadQuestion();
+		}
+
+		/* ==========================================
+			 QUIZ INTERACTION
+			 ========================================== */
 		let quizAnswered = false;
-		const questions = [
-			{ q: 'Чему равен корень из 144?', opts: ['11', '12', '14', '13'], correct: 1 },
-			{ q: 'Переведите: "I am learning"', opts: ['Я учу', 'Я учусь', 'Я изучил', 'Я буду учить'], correct: 1 },
-			{ q: 'Что выведет: print(2**3)?', opts: ['6', '9', '8', '5'], correct: 2 },
-			{ q: 'Сколько сторон у гексагона?', opts: ['5', '7', '8', '6'], correct: 3 },
-		];
 		let currentQ = 0;
 
 		function handleQuiz(el) {
 			if (quizAnswered) return;
 			quizAnswered = true;
-			const opts = document.querySelectorAll('.quiz-opt');
 			const isCorrect = el.dataset.correct === 'true';
 
 			if (isCorrect) {
@@ -2366,10 +2682,10 @@
 				fill.style.width = Math.min(100, parseInt(fill.style.width || '60') + 20) + '%';
 			} else {
 				el.classList.add('wrong');
+				const opts = document.querySelectorAll('.quiz-opt');
 				opts[questions[currentQ].correct].classList.add('correct');
 			}
 
-			// Next question after delay
 			setTimeout(() => {
 				currentQ = (currentQ + 1) % questions.length;
 				loadQuestion();
@@ -2387,19 +2703,21 @@
       <div class="opt-letter">${letters[i]}</div><span>${o}</span>
     </div>`
 			).join('');
-			// Rotate subjects
-			const subjects = ['Математика · Уровень 4', 'Английский · Уровень 3', 'Python · Уровень 5', 'Геометрия · Уровень 2'];
-			document.querySelector('.quiz-subject').textContent = subjects[currentQ];
+			document.querySelector('.quiz-subject').textContent = q.subj;
 		}
 
-		/* === SCROLL REVEAL === */
+		/* ==========================================
+			 SCROLL REVEAL
+			 ========================================== */
 		const revEls = document.querySelectorAll('.reveal');
 		const revObs = new IntersectionObserver((entries) => {
 			entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
 		}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 		revEls.forEach(el => revObs.observe(el));
 
-		/* === WAITLIST === */
+		/* ==========================================
+			 WAITLIST
+			 ========================================== */
 		function submitWL() {
 			const inp = document.getElementById('emailIn');
 			const btn = document.getElementById('wlBtn');
@@ -2409,47 +2727,45 @@
 				setTimeout(() => { inp.style.borderColor = ''; inp.style.background = ''; }, 1500);
 				return;
 			}
-			btn.textContent = '✓ Записано!';
+			btn.textContent = T[currentLang].wl_success;
 			btn.style.background = 'var(--green)';
 			inp.value = '';
-			setTimeout(() => { btn.textContent = 'Записаться →'; btn.style.background = ''; }, 3000);
+			setTimeout(() => { btn.textContent = T[currentLang].wl_btn; btn.style.background = ''; }, 3000);
 		}
 
-		/* === MOBILE MENU === */
+		/* ==========================================
+			 MOBILE MENU
+			 ========================================== */
 		document.getElementById('mobBtn').addEventListener('click', function () {
 			const links = document.querySelector('.nav-links');
+			const mobLang = document.getElementById('mobLang');
 			if (links.style.display === 'flex') {
 				links.style.display = '';
+				mobLang.style.display = 'none';
 				this.textContent = '☰';
 			} else {
 				links.style.cssText = 'display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--cream);border-bottom:var(--border);padding:16px 20px;gap:4px;z-index:999';
+				mobLang.style.display = 'flex';
 				this.textContent = '✕';
 			}
 		});
 
-		/* === SMOOTH SCROLL === */
+		/* ==========================================
+			 SMOOTH SCROLL
+			 ========================================== */
 		document.querySelectorAll('a[href^="#"]').forEach(a => {
 			a.addEventListener('click', e => {
 				e.preventDefault();
 				const t = document.querySelector(a.getAttribute('href'));
 				if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
 				const links = document.querySelector('.nav-links');
-				if (window.innerWidth <= 768) { links.style.display = ''; document.getElementById('mobBtn').textContent = '☰'; }
-			});
-		});
-
-		/* === XP COUNTER ANIMATION (on scroll to gamify) === */
-		let xpAnimated = false;
-		const gamifySection = document.getElementById('gamify');
-		const xpObs = new IntersectionObserver((entries) => {
-			entries.forEach(e => {
-				if (e.isIntersecting && !xpAnimated) {
-					xpAnimated = true;
-					// no-op for landing, placeholder for future counter
+				if (window.innerWidth <= 768) {
+					links.style.display = '';
+					document.getElementById('mobLang').style.display = 'none';
+					document.getElementById('mobBtn').textContent = '☰';
 				}
 			});
-		}, { threshold: 0.3 });
-		if (gamifySection) xpObs.observe(gamifySection);
+		});
 	</script>
 </body>
 
