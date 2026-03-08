@@ -1,19 +1,82 @@
+/* === TRANSLATIONS === */
+const lang = document.documentElement.lang || "ru";
+const translations = {
+  ru: {
+    questions: [
+      {
+        q: "Чему равен корень из 144?",
+        opts: ["11", "12", "14", "13"],
+        correct: 1,
+      },
+      {
+        q: 'Переведите: "I am learning"',
+        opts: ["Я учу", "Я учусь", "Я изучил", "Я буду учить"],
+        correct: 1,
+      },
+      {
+        q: "Что выведет: print(2**3)?",
+        opts: ["6", "9", "8", "5"],
+        correct: 2,
+      },
+      {
+        q: "Сколько сторон у гексагона?",
+        opts: ["5", "7", "8", "6"],
+        correct: 3,
+      },
+    ],
+    subjects: [
+      "Математика · Уровень 4",
+      "Английский · Уровень 3",
+      "Python · Уровень 5",
+      "Геометрия · Уровень 2",
+    ],
+    wlSuccess: "✓ Записано!",
+    wlDefault: "Записаться →",
+  },
+  uz: {
+    questions: [
+      {
+        q: "144 ning ildizi nimaga teng?",
+        opts: ["11", "12", "14", "13"],
+        correct: 1,
+      },
+      {
+        q: 'Tarjima qiling: "I am learning"',
+        opts: [
+          "Men o'qiyman",
+          "Men o'rganayapman",
+          "Men o'rgandim",
+          "Men o'rganaman",
+        ],
+        correct: 1,
+      },
+      {
+        q: "print(2**3) nimani chiqaradi?",
+        opts: ["6", "9", "8", "5"],
+        correct: 2,
+      },
+      {
+        q: "Oltiburchakning nechta tomoni bor?",
+        opts: ["5", "7", "8", "6"],
+        correct: 3,
+      },
+    ],
+    subjects: [
+      "Matematika · 4-daraja",
+      "Ingliz tili · 3-daraja",
+      "Python · 5-daraja",
+      "Geometriya · 2-daraja",
+    ],
+    wlSuccess: "✓ Yozildingiz!",
+    wlDefault: "Yozilish →",
+  },
+};
+
+const t = translations[lang] || translations.ru;
+const questions = t.questions;
+
 /* === QUIZ INTERACTION === */
 let quizAnswered = false;
-const questions = [
-  {
-    q: "Чему равен корень из 144?",
-    opts: ["11", "12", "14", "13"],
-    correct: 1,
-  },
-  {
-    q: 'Переведите: "I am learning"',
-    opts: ["Я учу", "Я учусь", "Я изучил", "Я буду учить"],
-    correct: 1,
-  },
-  { q: "Что выведет: print(2**3)?", opts: ["6", "9", "8", "5"], correct: 2 },
-  { q: "Сколько сторон у гексагона?", opts: ["5", "7", "8", "6"], correct: 3 },
-];
 let currentQ = 0;
 
 function handleQuiz(el) {
@@ -58,14 +121,7 @@ function loadQuestion() {
     </div>`,
     )
     .join("");
-  // Rotate subjects
-  const subjects = [
-    "Математика · Уровень 4",
-    "Английский · Уровень 3",
-    "Python · Уровень 5",
-    "Геометрия · Уровень 2",
-  ];
-  document.querySelector(".quiz-subject").textContent = subjects[currentQ];
+  document.querySelector(".quiz-subject").textContent = t.subjects[currentQ];
 }
 
 /* === SCROLL REVEAL === */
@@ -93,11 +149,11 @@ function submitWL() {
     }, 1500);
     return;
   }
-  btn.textContent = "✓ Записано!";
+  btn.textContent = t.wlSuccess;
   btn.style.background = "var(--green)";
   inp.value = "";
   setTimeout(() => {
-    btn.textContent = "Записаться →";
+    btn.textContent = t.wlDefault;
     btn.style.background = "";
   }, 3000);
 }
@@ -119,8 +175,8 @@ document.getElementById("mobBtn").addEventListener("click", function () {
 document.querySelectorAll('a[href^="#"]').forEach((a) => {
   a.addEventListener("click", (e) => {
     e.preventDefault();
-    const t = document.querySelector(a.getAttribute("href"));
-    if (t) t.scrollIntoView({ behavior: "smooth", block: "start" });
+    const target = document.querySelector(a.getAttribute("href"));
+    if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
     const links = document.querySelector(".nav-links");
     if (window.innerWidth <= 768) {
       links.style.display = "";
@@ -137,7 +193,6 @@ const xpObs = new IntersectionObserver(
     entries.forEach((e) => {
       if (e.isIntersecting && !xpAnimated) {
         xpAnimated = true;
-        // no-op for landing, placeholder for future counter
       }
     });
   },
