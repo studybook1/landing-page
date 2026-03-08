@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#000" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#FEF9EF"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Floating sticker: Yellow top-right -->
+  <g transform="translate(900, 30) rotate(6)">
+    <rect x="4" y="4" width="76" height="76" rx="12" fill="#000"/>
+    <rect width="76" height="76" rx="12" fill="#FFDE59" stroke="#000" stroke-width="2.5"/>
+    <text x="38" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="36" font-weight="800" fill="#000">Ab</text>
+  </g>
+
+  <!-- Floating sticker: Purple bottom-left -->
+  <g transform="translate(60, 330) rotate(-5)">
+    <rect x="4" y="4" width="68" height="68" rx="12" fill="#000"/>
+    <rect width="68" height="68" rx="12" fill="#EDE9FE" stroke="#000" stroke-width="2.5"/>
+    <text x="34" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="32" font-weight="800" fill="#7C3AED">∑</text>
+  </g>
+
+  <!-- Floating sticker: Green circle bottom-right -->
+  <g transform="translate(1068, 485)">
+    <circle cx="30" cy="30" r="30" fill="#000" transform="translate(3,3)"/>
+    <circle cx="30" cy="30" r="30" fill="#D1FAE5" stroke="#000" stroke-width="2.5"/>
+    <text x="30" y="38" text-anchor="middle" font-family="'Courier New', monospace" font-size="22" font-weight="700" fill="#059669">&lt;/&gt;</text>
+  </g>
+
+  <!-- Floating sticker: Coral mid-right -->
+  <g transform="translate(1082, 255) rotate(8)">
+    <rect x="3" y="3" width="58" height="58" rx="10" fill="#000"/>
+    <rect width="58" height="58" rx="10" fill="#FEE2E2" stroke="#000" stroke-width="2.5"/>
+    <text x="29" y="40" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="800" fill="#FF6B6B">AI</text>
+  </g>
+
+  <!-- Floating sticker: Blue top-left -->
+  <g transform="translate(48, 46) rotate(-3)">
+    <rect x="3" y="3" width="54" height="54" rx="10" fill="#000"/>
+    <rect width="54" height="54" rx="10" fill="#EEF0FF" stroke="#000" stroke-width="2.5"/>
+    <text x="27" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#4856F5">*</text>
+  </g>
+
+  <!-- ===== MAIN CARD ===== -->
+  <g transform="translate(155, 90)">
+    <!-- Shadow -->
+    <rect x="7" y="7" width="890" height="450" rx="20" fill="#000"/>
+    <!-- Card -->
+    <rect width="890" height="450" rx="20" fill="#FFFFFF" stroke="#000" stroke-width="3"/>
+    <!-- Blue top bar -->
+    <clipPath id="cardClip"><rect width="890" height="450" rx="20"/></clipPath>
+    <rect width="890" height="8" fill="#4856F5" clip-path="url(#cardClip)"/>
+
+    <!-- Logo -->
+    <g transform="translate(48, 36)">
+      <!-- Logo box -->
+      <rect x="3" y="3" width="42" height="42" rx="8" fill="#000"/>
+      <rect width="42" height="42" rx="8" fill="#4856F5" stroke="#000" stroke-width="2.5"/>
+      <text x="21" y="29" text-anchor="middle" font-family="'Courier New', monospace" font-size="16" font-weight="700" fill="#FFF">SB</text>
+      <!-- Text -->
+      <text x="58" y="19" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#000" letter-spacing="-0.5">StudyBook</text>
+      <text x="170" y="19" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#4856F5" letter-spacing="-0.5">.uz</text>
+      <!-- Status badge -->
+      <rect x="61" y="28" width="152" height="24" rx="12" fill="#D1FAE5" stroke="#000" stroke-width="2"/>
+      <circle cx="76" cy="40" r="4" fill="#00D68F" stroke="#000" stroke-width="1.5"/>
+      <text x="88" y="44" font-family="'Courier New', monospace" font-size="10" font-weight="700" fill="#000" letter-spacing="0.5">ЗАПУСК Q4 2026</text>
+    </g>
+
+    <!-- Headline -->
+    <text x="48" y="148" font-family="system-ui, -apple-system, sans-serif" font-size="58" font-weight="800" fill="#000" letter-spacing="-2.5">Учись</text>
+    
+    <!-- "умнее" with yellow underline -->
+    <rect x="220" y="152" width="200" height="10" rx="3" fill="#FFDE59" transform="rotate(-1, 383, 157)"/>
+    <text x="225" y="148" font-family="system-ui, -apple-system, sans-serif" font-size="58" font-weight="800" fill="#4856F5" letter-spacing="-2.5">умнее,</text>
+
+    <!-- Second line italic -->
+    <text x="48" y="216" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700" font-style="italic" fill="#000" letter-spacing="-1.5">а не дольше</text>
+
+    <!-- Subtitle -->
+    <text x="48" y="264" font-family="system-ui, sans-serif" font-size="18" fill="#4A4A68">AI-платформа персонализированного обучения.</text>
+    <text x="48" y="290" font-family="system-ui, sans-serif" font-size="18" fill="#4A4A68">Языки, математика, программирование — для учеников 11–28 лет.</text>
+
+    <!-- Subject tags -->
+    <g transform="translate(48, 320)">
+      <!-- Languages -->
+      <rect x="3" y="3" width="140" height="40" rx="8" fill="#000"/>
+      <rect width="140" height="40" rx="8" fill="#EEF0FF" stroke="#000" stroke-width="2.5"/>
+      <text x="16" y="27" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#4856F5">A</text>
+      <text x="36" y="27" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#000">Языки</text>
+      <text x="92" y="27" font-family="'Courier New', monospace" font-size="10" font-weight="700" fill="#4856F5">IELTS</text>
+
+      <!-- Math -->
+      <g transform="translate(160, 0)">
+        <rect x="3" y="3" width="170" height="40" rx="8" fill="#000"/>
+        <rect width="170" height="40" rx="8" fill="#EDE9FE" stroke="#000" stroke-width="2.5"/>
+        <text x="16" y="27" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#7C3AED">∑</text>
+        <text x="38" y="27" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#000">Математика</text>
+        <text x="130" y="27" font-family="'Courier New', monospace" font-size="10" font-weight="700" fill="#7C3AED">500+</text>
+      </g>
+
+      <!-- Code -->
+      <g transform="translate(350, 0)">
+        <rect x="3" y="3" width="198" height="40" rx="8" fill="#000"/>
+        <rect width="198" height="40" rx="8" fill="#FEF9C3" stroke="#000" stroke-width="2.5"/>
+        <text x="14" y="27" font-family="'Courier New', monospace" font-size="16" font-weight="700" fill="#B45309">{}</text>
+        <text x="40" y="27" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#000">Программирование</text>
+      </g>
+
+      <!-- AI -->
+      <g transform="translate(568, 0)">
+        <rect x="3" y="3" width="145" height="40" rx="8" fill="#000"/>
+        <rect width="145" height="40" rx="8" fill="#D1FAE5" stroke="#000" stroke-width="2.5"/>
+        <text x="16" y="27" font-family="system-ui, sans-serif" font-size="16" font-weight="800" fill="#059669">AI</text>
+        <text x="42" y="27" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#000">тьютор 24/7</text>
+      </g>
+    </g>
+
+    <!-- Bottom stats -->
+    <g transform="translate(48, 398)">
+      <text x="0" y="0" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#9494B0" letter-spacing="1.5">НАПРАВЛЕНИЯ</text>
+      <text x="0" y="26" font-family="system-ui, sans-serif" font-size="28" font-weight="800" fill="#000" letter-spacing="-1">3</text>
+
+      <line x1="120" y1="-8" x2="120" y2="30" stroke="#000" stroke-width="2" stroke-opacity="0.1"/>
+
+      <text x="144" y="0" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#9494B0" letter-spacing="1.5">ВОЗРАСТ</text>
+      <text x="144" y="26" font-family="system-ui, sans-serif" font-size="28" font-weight="800" fill="#000" letter-spacing="-1">11–28</text>
+
+      <line x1="278" y1="-8" x2="278" y2="30" stroke="#000" stroke-width="2" stroke-opacity="0.1"/>
+
+      <text x="302" y="0" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#9494B0" letter-spacing="1.5">ФОРМАТ</text>
+      <text x="302" y="26" font-family="system-ui, sans-serif" font-size="28" font-weight="800" fill="#000" letter-spacing="-1">Гибрид</text>
+
+      <line x1="450" y1="-8" x2="450" y2="30" stroke="#000" stroke-width="2" stroke-opacity="0.1"/>
+
+      <text x="474" y="0" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#9494B0" letter-spacing="1.5">ГЕЙМИФИКАЦИЯ</text>
+      <text x="474" y="26" font-family="system-ui, sans-serif" font-size="28" font-weight="800" fill="#4856F5" letter-spacing="-1">XP + Стрики</text>
+    </g>
+  </g>
+
+  <!-- ===== FLOATING BADGES OUTSIDE CARD ===== -->
+
+  <!-- XP badge -->
+  <g transform="translate(880, 125)">
+    <rect x="3" y="3" width="118" height="38" rx="19" fill="#000"/>
+    <rect width="118" height="38" rx="19" fill="#FFDE59" stroke="#000" stroke-width="2.5"/>
+    <text x="18" y="26" font-family="system-ui, sans-serif" font-size="18" font-weight="800" fill="#000">★</text>
+    <text x="38" y="26" font-family="'Courier New', monospace" font-size="14" font-weight="700" fill="#000">350 XP</text>
+  </g>
+
+  <!-- Streak badge -->
+  <g transform="translate(128, 545) rotate(-2)">
+    <rect x="3" y="3" width="148" height="38" rx="19" fill="#000"/>
+    <rect width="148" height="38" rx="19" fill="#FEE2E2" stroke="#000" stroke-width="2.5"/>
+    <text x="20" y="26" font-family="system-ui, sans-serif" font-size="16" font-weight="800" fill="#FF6B6B">🔥</text>
+    <text x="44" y="26" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#000">7-дней стрик</text>
+  </g>
+
+  <!-- Achievement badge -->
+  <g transform="translate(700, 555) rotate(2)">
+    <rect x="3" y="3" width="176" height="38" rx="19" fill="#000"/>
+    <rect width="176" height="38" rx="19" fill="#D1FAE5" stroke="#000" stroke-width="2.5"/>
+    <text x="20" y="26" font-family="system-ui, sans-serif" font-size="16" font-weight="800" fill="#059669">★</text>
+    <text x="42" y="26" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#000">Первый урок!</text>
+  </g>
+</svg>
