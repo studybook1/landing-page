@@ -1,8 +1,16 @@
 /* === QUIZ INTERACTION === */
 let quizAnswered = false;
 const questions = [
-  { q: "Чему равен корень из 144?", opts: ["11", "12", "14", "13"], correct: 1 },
-  { q: 'Переведите: "I am learning"', opts: ["Я учу", "Я учусь", "Я изучил", "Я буду учить"], correct: 1 },
+  {
+    q: "Чему равен корень из 144?",
+    opts: ["11", "12", "14", "13"],
+    correct: 1,
+  },
+  {
+    q: 'Переведите: "I am learning"',
+    opts: ["Я учу", "Я учусь", "Я изучил", "Я буду учить"],
+    correct: 1,
+  },
   { q: "Что выведет: print(2**3)?", opts: ["6", "9", "8", "5"], correct: 2 },
   { q: "Сколько сторон у гексагона?", opts: ["5", "7", "8", "6"], correct: 3 },
 ];
@@ -22,7 +30,8 @@ function handleQuiz(el) {
     popup.classList.add("show");
     setTimeout(() => popup.classList.remove("show"), 1200);
     const fill = document.getElementById("quizFill");
-    fill.style.width = Math.min(100, parseInt(fill.style.width || "60") + 20) + "%";
+    fill.style.width =
+      Math.min(100, parseInt(fill.style.width || "60") + 20) + "%";
   } else {
     el.classList.add("wrong");
     opts[questions[currentQ].correct].classList.add("correct");
@@ -50,7 +59,12 @@ function loadQuestion() {
     )
     .join("");
   // Rotate subjects
-  const subjects = ["Математика · Уровень 4", "Английский · Уровень 3", "Python · Уровень 5", "Геометрия · Уровень 2"];
+  const subjects = [
+    "Математика · Уровень 4",
+    "Английский · Уровень 3",
+    "Python · Уровень 5",
+    "Геометрия · Уровень 2",
+  ];
   document.querySelector(".quiz-subject").textContent = subjects[currentQ];
 }
 
@@ -95,7 +109,8 @@ document.getElementById("mobBtn").addEventListener("click", function () {
     links.style.display = "";
     this.textContent = "☰";
   } else {
-    links.style.cssText = "display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--cream);border-bottom:var(--border);padding:16px 20px;gap:4px;z-index:999";
+    links.style.cssText =
+      "display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--cream);border-bottom:var(--border);padding:16px 20px;gap:4px;z-index:999";
     this.textContent = "✕";
   }
 });
