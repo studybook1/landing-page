@@ -1,0 +1,49 @@
+# robots.txt for studybook.uz
+# AI-native EdTech Platform
+
+User-agent: *
+Allow: /
+
+# Crawl delay for polite crawling
+Crawl-delay: 1
+
+# Disallow admin and internal areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /dashboard/
+Disallow: /teacher/
+Disallow: /parent/
+Disallow: /settings/
+Disallow: /auth/
+Disallow: /login
+Disallow: /signup
+Disallow: /reset-password
+Disallow: /internal/
+Disallow: /debug/
+Disallow: /health
+Disallow: /_next/
+Disallow: /static/private/
+
+# Allow static assets for rendering
+Allow: /static/
+Allow: /images/
+Allow: /og-banner.png
+
+# Sitemap location
+Sitemap: https://studybook.uz/sitemap.xml
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Yandex (important for UZ/RU market)
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+Host: https://studybook.uz
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
